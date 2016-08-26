@@ -37,6 +37,13 @@ public class Matrix {
         }
     }
 
+    private void setMatrix(String matrixString) {
+        String[] rowStrings = matrixString.split(";");
+        for (int i=0; i<rowStrings.length; i++) {
+            setRow(i, rowStrings[i]);
+        }
+    }
+
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
         for (int i=0; i<matrix.length; i++) {
