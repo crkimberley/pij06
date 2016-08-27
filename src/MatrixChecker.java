@@ -3,8 +3,8 @@
  */
 public class MatrixChecker {
 
-    // Same recursive method as used for palindromes earlier
-    boolean isSymmetrical(int[] arrayToCheck) {
+    // Revised recursive method used for palindromes earlier
+    private boolean isSymmetrical(int[] arrayToCheck) {
         if (arrayToCheck.length < 2) {
             return true;
         }
@@ -16,5 +16,32 @@ public class MatrixChecker {
             shorterArray[i] = arrayToCheck[i + 1];
         }
         return isSymmetrical(shorterArray);
+    }
+
+    /* Iterative method
+
+    public boolean isSymmetrical(int[] arrayToCheck) {
+		for (int i=0;i<arrayToCheck.length/2;i++) {
+			if (arrayToCheck[i] != arrayToCheck[arrayToCheck.length-i-1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+     */
+
+    private boolean isSymmetrical(int[][] arrayToCheck) {
+        if (arrayToCheck.length != arrayToCheck[0].length) {
+            System.out.println("Array dimensions aren't equal");
+            return false;
+        }
+        for (int i=0; i<arrayToCheck.length; i++) {
+            for (int j=0; j<=arrayToCheck.length/2; j++) {
+                if (arrayToCheck[i][j] != arrayToCheck[j][i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
