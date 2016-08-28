@@ -35,6 +35,6 @@ println(matrixChecker.isSymmetrical(test2DArray))
 test2DArray = [[1,3,5],[3,7,9],[5,9,11]]
 println(test2DArray)
 println(matrixChecker.isSymmetrical(test2DArray))
-test2DArray = [[1,2,3,4],[2,5,6,7],[3,6,8,9],[4,7,9,10]] as int [][]
+test2DArray = [[1,2,3,4],[2,5,6,7],[3,6,8,9],[4,7,99,10]] as int [][]
 println(test2DArray)
 println(matrixChecker.isSymmetrical(test2DArray))

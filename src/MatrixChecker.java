@@ -35,8 +35,9 @@ public class MatrixChecker {
             System.out.println("Array dimensions aren't equal");
             return false;
         }
-        for (int i=0; i<arrayToCheck.length; i++) {
-            for (int j=0; j<=arrayToCheck.length/2; j++) {
+        for (int i=1; i<arrayToCheck.length; i++) {
+            for (int j=0; j<i   ; j++) {
+                System.out.println("checking element " + i + ", " + j);
                 if (arrayToCheck[i][j] != arrayToCheck[j][i]) {
                     return false;
                 }
