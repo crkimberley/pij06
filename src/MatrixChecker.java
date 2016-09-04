@@ -12,9 +12,8 @@ public class MatrixChecker {
             return false;
         }
         int[] shorterArray = new int[arrayToCheck.length - 2];
-        for (int i=0; i<shorterArray.length; i++ ) {
-            shorterArray[i] = arrayToCheck[i + 1];
-        }
+        // Replaced array copying loop with arraycopy - prompted by Intellij warning
+        System.arraycopy(arrayToCheck, 1, shorterArray, 0, arrayToCheck.length - 2);
         return isSymmetrical(shorterArray);
     }
 
