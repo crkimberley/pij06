@@ -30,15 +30,25 @@ public class MatrixChecker {
 	}
      */
 
-    private boolean isSymmetrical(int[][] arrayToCheck) {
+    public boolean isSymmetrical(int[][] arrayToCheck) {
         if (arrayToCheck.length != arrayToCheck[0].length) {
             System.out.println("Array dimensions aren't equal");
             return false;
         }
         for (int i=1; i<arrayToCheck.length; i++) {
-            for (int j=0; j<i   ; j++) {
-                System.out.println("checking element " + i + ", " + j);
+            for (int j=0; j<i; j++) {
                 if (arrayToCheck[i][j] != arrayToCheck[j][i]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public boolean isTriangular(int[][] arrayToCheck) {
+        for (int i=1; i<arrayToCheck.length; i++) {
+            for (int j=0; j<i; j++) {
+                if (arrayToCheck[i][j] != 0) {
                     return false;
                 }
             }

@@ -71,4 +71,14 @@ public class Matrix {
             System.out.println();
         }
     }
+
+    private boolean isSymmetrical() {
+        MatrixChecker matrixChecker = new MatrixChecker();
+        return matrixChecker.isSymmetrical(matrix);
+    }
+
+    private boolean isTriangular() {
+        MatrixChecker matrixChecker = new MatrixChecker();
+        return matrixChecker.isTriangular(matrix);
+    }
 }
