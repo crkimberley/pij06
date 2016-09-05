@@ -3,7 +3,7 @@
  */
 public class ArrayCopier {
 
-    public void copy(int[] src, int[] dst) {
+    private void copy(int[] src, int[] dst) {
         for (int i=0; i<dst.length; i++) {
             dst[i] = (i < src.length ? src[i] : 0);
         }
