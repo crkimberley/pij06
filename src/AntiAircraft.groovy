@@ -19,8 +19,29 @@ while (true) {
     print "Enter z coordinate: "
     int z = input.nextInt()
     Result result = target.fire(x, y, z)
-    println result
     if (result == Result.HIT) {
+        println "You hit the target!"
         break
+    }
+    if (result == Result.OUT_OF_RANGE) {
+        println "Missed - out of range"
+    }
+    if (result == Result.FAIL_LEFT) {
+        println "Missed - target is to the right"
+    }
+    if (result == Result.FAIL_RIGHT) {
+        println "Missed - target is to the left"
+    }
+    if (result == Result.FAIL_LOW) {
+        println "Missed - too low"
+    }
+    if (result == Result.FAIL_HIGH) {
+        println "Missed - too high"
+    }
+    if (result == Result.FAIL_SHORT) {
+        println "Missed - target is further away"
+    }
+    if (result == Result.FAIL_LONG) {
+        println "Missed - target is nearer"
     }
 }
