@@ -4,8 +4,8 @@ import java.util.Scanner;
  * @author crkimberley on 24/08/2016.
  */
 public class Employees {
-    private String[] names = new String[10];
-    private int[] ids = new int[10];
+    private String[] names = new String[3];
+    private int[] ids = new int[3];
 
     public static void main(String[] args) {
         Employees employeeDetails = new Employees();
